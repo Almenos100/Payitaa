@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Payita 💖</title>
+  <link rel="stylesheet" href="Css/payita.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f5;
+      color: #333;
+    }
+
+    header {
+      background: #ff8fab;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      font-size: 2.5em;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      background: #ffc1cc;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      font-weight: bold;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #a00050;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff007f;
+    }
+
+    section {
+      padding: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #d63384;
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .caption {
+      padding: 15px;
+      text-align: center;
+      color: #e91e63;
+      font-size: 1em;
+    }
+
+    .about {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      line-height: 1.6;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #888;
+      background: #ffdee9;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Para mi Payita 💕
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#galeria">Galería</a>
+    <a href="#frases">Frases</a>
+    <a href="#sobre">Sobre Nosotrxs</a>
+  </nav>
+
+  <section id="inicio">
+    <h2>Bienvenida, payita✨</h2>
+    <p style="text-align:center; font-size: 1.2em; color: #a00050;">
+      Esta página es solo para ti, Payita. Porque te mereces un rincón lleno de amor, sonrisas y recuerdos.
+    </p>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería de Momentos 💖</h2>
+    <div class="gallery">
+      <div class="card">
+        <img src="payita1.jpg" alt="Foto 1">
+        <div class="caption">"Eres mi flor favorita 🌸"</div>
+      </div>
+      <div class="card">
+        <img src="payita2.jpg" alt="Foto 2">
+        <div class="caption">"Contigo, todo es magia ✨"</div>
+      </div>
+      <div class="card">
+        <img src="payita3.jpg" alt="Foto 3">
+        <div class="caption">"Tu risa es mi canción favorita 🎵"</div>
+      </div>
+      <div class="card">
+        <img src="payita4.jpg" alt="Foto 4">
+        <div class="caption">"El mundo es más bonito contigo 💘"</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="frases">
+    <h2>Frases para Ti 💌</h2>
+    <div class="about">
+      <p>🌷 “Eres la casualidad más bonita que llegó a mi vida.”</p>
+      <p>🌸 “Cada día contigo es un regalo que no cambiaría por nada.”</p>
+      <p>🌹 “No sé qué hice bien, pero me tocaste el alma.”</p>
+      <p>💗 “Eres arte, ternura, amor mi Payita.”</p>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre Nosotrxs 🫶</h2>
+    <div class="about">
+      <p>Esta página la hice con todo mi cariño para recordarte cuánto te quiero. No importa lo que pase, siempre vas a tener mi corazón. Gracias por ser como eres, por tu dulzura, tus abrazos y tus locuras.</p>
+    </div>
+  </section>
+
+  <footer>
+    Hecho con amor por alguien que te piensa siempre 💘
+  </footer>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 5 + 5) + "s";
+      document.body.appendChild(heart);
+  
+      setTimeout(() => {
+        heart.remove();
+      }, 10000);
+    }
+  
+    setInterval(createHeart, 300);
+  </script>
+</body>
+</html>
